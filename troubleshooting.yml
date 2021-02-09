@@ -1,0 +1,13 @@
+---
+- name: Play to experiment with various playbook troubleshooting scenarios
+  hosts:
+    - all
+  tasks:
+    - name: DEbug task that runs at all verbosity levles
+      debug:
+        msg: "This is debug task has a verbosity threshold of 0"
+
+    - name: Debug task that only runs at verbosity level 2 and above 
+      debug:
+        msg: "This debug task has a verbosity threshold of 2"
+        verbosity: 2
